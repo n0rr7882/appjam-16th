@@ -165,8 +165,7 @@ Request Body (Multipart form)
 		"comments": [],     // 댓글 comment_id 배열
 		"_id": "5b7808270d4de239b28a5d86",
 		"title": "제목1",
-        "content": "내용내용내용",
-        "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
+		"content": "내용내용내용",
 		"user": {
 			"ddate": "2018-08-18T11:33:12.042Z",
 			"_id": "5b7803f7dc444c39643250e4",
@@ -204,8 +203,7 @@ Request Headers
 			"comments": [],     // 댓글 comment_id 배열
 			"_id": "5b7808270d4de239b28a5d86",
 			"title": "제목1",
-            "content": "내용내용내용",
-            "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
+			"content": "내용내용내용",
 			"user": {
 				"ddate": "2018-08-18T11:33:12.042Z",
 				"_id": "5b7803f7dc444c39643250e4",
@@ -244,8 +242,7 @@ Request Headers
 			"comments": [],     // 댓글 comment_id 배열
 			"_id": "5b7808270d4de239b28a5d86",
 			"title": "제목1",
-            "content": "내용내용내용내용",
-            "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
+			"content": "내용내용내용내용",
 			"user": {
 				"ddate": "2018-08-18T11:33:12.042Z",
 				"_id": "5b7803f7dc444c39643250e4",
@@ -283,8 +280,7 @@ Request Headers
 		"comments": [],     // 댓글 comment_id 배열
 		"_id": "5b7808270d4de239b28a5d86",
 		"title": "제목1",
-        "content": "내용내용내용내용",
-        "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
+		"content": "내용내용내용내용",
 		"user": {
 			"ddate": "2018-08-18T11:33:12.042Z",
 			"_id": "5b7803f7dc444c39643250e4",
