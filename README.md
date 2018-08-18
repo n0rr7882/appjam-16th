@@ -89,7 +89,7 @@ Request Headers
 ### request
 
 ```http
-Request Body
+Request Body (Multipart form)
     username: string
     password: string
     farewellFor: number
