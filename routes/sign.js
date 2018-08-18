@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
         }
         const token = sign({ id: user._id }, constants.JWT_SALT);
         user = { ...user._doc, dday: user.dday, rank: user.rank };
-        return res.send({ message: 'SUCCESS', token, user });
+        return res.send({ success: true, message: 'SUCCESS', token, user });
     } catch (err) {
         return res.status(400).send({ success: false, message: err.message });
     }
