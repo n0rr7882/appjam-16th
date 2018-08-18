@@ -14,6 +14,7 @@ function uploadHandler(image, post) {
 router.post('/', filter, async (req, res) => {
     try {
         const validated = checkProperty(req.body, 'post', true);
+        console.log(validated);
         if (validated.message !== 'SUCCESS') {
             throw new Error(validated.message);
         }
