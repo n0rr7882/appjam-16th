@@ -13,6 +13,7 @@ function uploadHandler(thumbnail, user) {
 router.post('/', async (req, res) => {
     try {
         console.log(req.body);
+        console.log(req.files);
         if ((await User.findOne({ userid: req.body.userid }))) {
             throw new Error('이미 등록된 ID입니다.');
         }
