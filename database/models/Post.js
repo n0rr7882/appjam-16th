@@ -6,7 +6,7 @@ const post = new Schema({
     content: { type: String, required: true },
     likes: [{ type: Schema.Types.ObjectId, required: true, ref: 'user' }],
     comments: [{ type: Schema.Types.ObjectId, required: true, ref: 'comment' }],
-    image: { type: String, required: true }
+    image: String
 }, { timestamps: true });
 
 function removeV(next) {
