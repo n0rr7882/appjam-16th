@@ -295,7 +295,7 @@ Request Headers
 
 # Comment
 
-## `POST /comments/{post_id}`
+## `POST /comments`
 
 ### request
 
@@ -304,6 +304,7 @@ Request Headers
     Authorization: string(token)
 Request Body
     content: string
+    postid: string
 ```
 
 ### response
