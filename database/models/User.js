@@ -7,7 +7,8 @@ const user = new Schema({
     userid: { type: String, required: true, index: true },
     username: { type: String, required: true },
     password: { type: String, required: true, select: false },
-    ddate: { type: Date, required: true, default: Date.now }
+    ddate: { type: Date, required: true, default: Date.now },
+    thumbnail: { type: String, required: true }
 }, { timestamps: true });
 
 user.virtual('dday').get(function () {
@@ -30,6 +31,11 @@ user.virtual('rank').get(function () {
     return rank;
 });
 
+function updateThumbnail(next) {
+    this.thumbnail = `/uploads/${this._id}/thumbnail.jpg`;
+    return next();
+}
+
 function encryptPassword(next) {
     if (!this.isModified('password')) return next();
     this.password = password(this.password);
@@ -41,6 +47,7 @@ function removePassword(next) {
     return next();
 }
 
+user.pre('save', updateThumbnail);
 user.pre('save', encryptPassword);
 user.pre('update', encryptPassword);
 user.pre('find', removePassword);
