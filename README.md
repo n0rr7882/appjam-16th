@@ -1,6 +1,8 @@
 appjam-16th API
 ===============
 
+> demo: http://norr.uy.to:6010/api/~
+
 # Index
 
 - sign
