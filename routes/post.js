@@ -20,8 +20,7 @@ router.post('/', filter, async (req, res) => {
             throw new Error(validated.message);
         }
         for (const i in validated.data) {
-            validated.data[i] = (validated.data[i])[0] === '"' ? (validated.data[i]).substr(1) : validated.data[i];
-            validated.data[i] = (validated.data[i])[0] === '"' ? (validated.data[i]).slice(0, -1) : validated.data[i];
+            validated.data[i] = (validated.data[i])[0] === '"' ? (validated.data[i]).slice(1, -1) : validated.data[i];
         }
         validated.data.user = req.user.id;
         let post = new Post(validated.data);
