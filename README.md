@@ -401,6 +401,14 @@ Request Headers
 
 # Thumbnail path
 
+## User thumbnail
+
 ```
 http://<hostname>/uploads/<user_id>/thumbnail.jpg
+```
+
+## Default thumbnail
+
+```
+http://<hostname>/uploads/default.jpg
 ```
