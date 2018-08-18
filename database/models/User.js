@@ -11,11 +11,11 @@ const user = new Schema({
 }, { timestamps: true });
 
 user.virtual('dday').get(function () {
-    return moment.duration(moment().diff(moment(this.ddate), 'days'));
+    return moment.duration(moment().diff(moment(this.ddate), 'days')) + 0;
 });
 
 user.virtual('rank').get(function () {
-    const dday = moment.duration(moment().diff(moment(this.ddate), 'days'));
+    const dday = moment.duration(moment().diff(moment(this.ddate), 'days')) + 0;
     let rank = '';
     if (dday < 7) rank = '인턴';
     else if (dday < 15) rank = '신입';
