@@ -12,15 +12,15 @@ function uploadHandler(thumbnail, user) {
 
 router.post('/', async (req, res) => {
     try {
-        console.log(req.body);
-        console.log(req.files);
         if ((await User.findOne({ userid: req.body.userid }))) {
             throw new Error('이미 등록된 ID입니다.');
         }
-        const validated = checkProperty(req.body, 'user', true);
-        for (const i in validated.data) {
-            validated.data[i] = (validated.data[i])[0] === '"' ? (validated.data[i]).slice(1, -1) : validated.data[i];
+        for (const i in req.body) {
+            req.body[i] = (req.body[i])[0] === '"' ? (req.body[i]).slice(1, -1) : req.body[i];
         }
+        console.log(req.body);
+        console.log(req.files);
+        const validated = checkProperty(req.body, 'user', true);
         console.log(validated);
         if (validated.message !== 'SUCCESS') {
             throw new Error(validated.message);

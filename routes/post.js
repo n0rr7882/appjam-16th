@@ -13,14 +13,14 @@ function uploadHandler(image, post) {
 
 router.post('/', filter, async (req, res) => {
     try {
+        for (const i in req.body) {
+            req.body[i] = (req.body[i])[0] === '"' ? (req.body[i]).slice(1, -1) : req.body[i];
+        }
         console.log(req.body);
         const validated = checkProperty(req.body, 'post', true);
         console.log(validated);
         if (validated.message !== 'SUCCESS') {
             throw new Error(validated.message);
-        }
-        for (const i in validated.data) {
-            validated.data[i] = (validated.data[i])[0] === '"' ? (validated.data[i]).slice(1, -1) : validated.data[i];
         }
         validated.data.user = req.user.id;
         let post = new Post(validated.data);
