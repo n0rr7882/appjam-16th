@@ -6,11 +6,10 @@ export const CHECK_LIST = {
         { property: 'ddate', reg: /^\d{4}-\d{1,2}-\d{1,2}$/, message: '언제 이별하셨나요?' }
     ],
     post: [
-        { property: 'title', reg: /.+/, message: '제목을 입력해주세요.' },
         { property: 'content', reg: /^(?=.*).+$/m, message: '내용을 입력해주세요.' }
     ],
     comment: [
-        { property: 'content', reg: /^(?=.*).+$/m, message: 'INVALID_CONTENT' }
+        { property: 'content', reg: /^(?=.*).+$/m, message: '내용을 입력해주세요.' }
     ]
 };
 

@@ -2,7 +2,6 @@ import mongoose, { Schema } from 'mongoose';
 
 const post = new Schema({
     user: { type: Schema.Types.ObjectId, required: true, ref: 'user' },
-    title: { type: String, required: true },
     content: { type: String, required: true },
     likes: [{ type: Schema.Types.ObjectId, required: true, ref: 'user' }],
     comments: [{ type: Schema.Types.ObjectId, required: true, ref: 'comment' }],
