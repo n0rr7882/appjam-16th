@@ -6,7 +6,6 @@ const post = new Schema({
     content: { type: String, required: true },
     likes: [{ type: Schema.Types.ObjectId, required: true, ref: 'user' }],
     comments: [{ type: Schema.Types.ObjectId, required: true, ref: 'comment' }],
-    image: String
 }, { timestamps: true });
 
 function removeV(next) {
@@ -14,12 +13,6 @@ function removeV(next) {
     return next();
 }
 
-function updateImage(next) {
-    this.thumbnail = `/uploads/${this._id}/image.jpg`;
-    return next();
-}
-
-post.pre('save', updateImage);
 post.pre('find', removeV);
 post.pre('findOne', removeV);
 post.pre('findById', removeV);
