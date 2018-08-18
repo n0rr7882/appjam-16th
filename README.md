@@ -22,7 +22,7 @@ appjam-16th API
 - like
     - `POST /likes/{post_id}`
     - `DELETE /likes/{post_id}`
-- thumbnail
+- image path
 
 # Sign
 
@@ -144,9 +144,10 @@ Request Body (Multipart form)
 ```http
 Request Headers
     Authorization: string(token)
-Request Body
+Request Body (Multipart form)
     title: string
     content: string
+    image: file(image)
 ```
 
 ### response
@@ -400,7 +401,7 @@ Request Headers
 }
 ```
 
-# Thumbnail path
+# Image path
 
 ## User thumbnail
 
@@ -412,4 +413,10 @@ http://<hostname>/uploads/<user_id>/thumbnail.jpg
 
 ```
 http://<hostname>/uploads/default.jpg
+```
+
+## Post image
+
+```
+http://<hostname>/uploads/<post_id>/image.jpg
 ```

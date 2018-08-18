@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import gm from 'gm';
 import fs from 'fs-extra';
 
 import User from '../database/models/User';

@@ -1,9 +1,15 @@
 import { Router } from 'express';
+import fs from 'fs-extra';
+
 import Post from '../database/models/Post';
 import { filter } from '../tools/authentication';
 import { checkProperty } from '../tools/validator';
 
 const router = Router();
+
+function uploadHandler(image, post) {
+    return fs.ensureDir(`${__dirname}/../uploads/${post._id}`).then(() => image.mv(`${__dirname}/../uploads/${post._id}/image.jpg`))
+}
 
 router.post('/', filter, async (req, res) => {
     try {
@@ -12,7 +18,11 @@ router.post('/', filter, async (req, res) => {
             throw new Error(validated.message);
         }
         validated.data.user = req.user.id;
-        let post = await Post.findById((await Post.create(validated.data))._id).populate('user');
+        let post = new Post(validated.data);
+        if (req.files && req.files.image) {
+            await uploadHandler(req.files.image, post);
+        }
+        post = await Post.findById((await post.save())._id).populate('user');
         const extendedUser = { ...post.user._doc, dday: post.user.dday, rank: post.user.rank };
         post = { ...post._doc, user: extendedUser };
         return res.send({ success: true, message: 'SUCCESS', post });
