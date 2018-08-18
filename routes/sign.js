@@ -8,9 +8,9 @@ const router = Router();
 
 router.post('/', async (req, res) => {
     try {
-        let user = (await User.login(req.body.username, req.body.password));
+        let user = (await User.login(req.body.userid, req.body.password));
         if (!user) {
-            throw new Error('이메일 혹은 암호가 일치하지 않습니다.');
+            throw new Error('ID 혹은 암호가 일치하지 않습니다.');
         }
         const token = sign({ id: user._id }, constants.JWT_SALT);
         user = { ...user._doc, dday: user.dday, rank: user.rank };

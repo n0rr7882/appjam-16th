@@ -13,8 +13,8 @@ function uploadHandler(thumbnail, user) {
 
 router.post('/', async (req, res) => {
     try {
-        if ((await User.findOne({ username: req.body.username }))) {
-            throw new Error('이미 등록된 사용자 이름입니다.');
+        if ((await User.findOne({ userid: req.body.userid }))) {
+            throw new Error('이미 등록된 ID입니다.');
         }
         const validated = checkProperty(req.body, 'user', true);
         if (validated.message !== 'SUCCESS') {

@@ -4,7 +4,8 @@ import { password } from '../../tools/password';
 const moment = require('moment');
 
 const user = new Schema({
-    username: { type: String, required: true, index: true },
+    userid: { type: String, required: true, index: true },
+    username: { type: String, required: true },
     password: { type: String, required: true, select: false },
     farewellFor: { type: Number, required: true, default: 0 }
 }, { timestamps: true });
@@ -46,8 +47,8 @@ user.pre('find', removePassword);
 user.pre('findOne', removePassword);
 user.pre('findById', removePassword);
 
-user.statics.login = function (username, plainPassword) {
-    return this.findOne({ username, password: password(plainPassword) });
+user.statics.login = function (userid, plainPassword) {
+    return this.findOne({ userid, password: password(plainPassword) });
 }
 
 export default mongoose.model('user', user);

@@ -32,7 +32,7 @@ appjam-16th API
 
 ```http
 Request Body
-    username: string
+    userid: string
     password: string
 ```
 
@@ -90,6 +90,7 @@ Request Headers
 
 ```http
 Request Body (Multipart form)
+    userid: string
     username: string
     password: string
     farewellFor: number
@@ -193,7 +194,7 @@ Request Headers
 	"posts": [
 		{
 			"likes": [],        // 좋아요한 user_id 배열
-	        "comments": [],     // 댓글 comment_id 배열
+			"comments": [],     // 댓글 comment_id 배열
 			"_id": "5b7808270d4de239b28a5d86",
 			"title": "제목1",
 			"content": "내용내용내용",
@@ -231,7 +232,7 @@ Request Headers
 	"posts": [
 		{
 			"likes": [],        // 좋아요한 user_id 배열
-		    "comments": [],     // 댓글 comment_id 배열
+			"comments": [],     // 댓글 comment_id 배열
 			"_id": "5b7808270d4de239b28a5d86",
 			"title": "제목1",
 			"content": "내용내용내용내용",
