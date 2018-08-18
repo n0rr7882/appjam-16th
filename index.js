@@ -19,7 +19,7 @@ app.disable('x-powered-by');
 app.use(logger(constants.LOG_FORMAT));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/uploads', express.static(`${__dirname}/uploads`));
+app.use('/api/uploads', express.static(`${__dirname}/uploads`));
 app.use(fileUpload());
 app.use(cors());
 
