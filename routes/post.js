@@ -19,6 +19,10 @@ router.post('/', filter, async (req, res) => {
         if (validated.message !== 'SUCCESS') {
             throw new Error(validated.message);
         }
+        for (const i in validated.data) {
+            validated.data[i] = (validated.data[i])[0] === '"' ? (validated.data[i]).substr(1) : validated.data[i];
+            validated.data[i] = (validated.data[i])[0] === '"' ? (validated.data[i]).slice(0, -1) : validated.data[i];
+        }
         validated.data.user = req.user.id;
         let post = new Post(validated.data);
         if (req.files && req.files.image) {
