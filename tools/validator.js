@@ -1,7 +1,7 @@
 export const CHECK_LIST = {
     user: [
         { property: 'userid', reg: /^(?=.*)[a-zA-Z0-9]{6,20}$/, message: 'ID는 6자이상, 영문자, 숫자(선택)로 이루어져야 합니다.' },
-        { property: 'username', reg: /\w+/, message: '사용자 이름을 기입해주세요.' },
+        { property: 'username', reg: /^(?=.*)[^\s]{1,20}$/, message: '사용자 이름을 기입해주세요.' },
         { property: 'password', reg: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,20}$/, message: '8자 이상의 영문, 숫자로 이루어진 암호를 기입해주세요.' },
         { property: 'farewellFor', reg: /\d+/, message: '이별으로부터 얼마나 지났나요?' }
     ],
