@@ -50,7 +50,8 @@ Request Body
 		"createdAt": "2018-08-18T11:33:12.042Z",
 		"updatedAt": "2018-08-18T11:33:12.042Z",
 		"dday": 50,
-		"rank": "과장"
+        "rank": "과장",
+        "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 	}
 }
 ```
@@ -77,7 +78,8 @@ Request Headers
 		"createdAt": "2018-08-18T11:33:12.042Z",
 		"updatedAt": "2018-08-18T11:33:12.042Z",
 		"dday": 50,
-		"rank": "과장"
+        "rank": "과장",
+        "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 	}
 }
 ```
@@ -110,7 +112,8 @@ Request Body (Multipart form)
 		"createdAt": "2018-08-18T11:33:12.042Z",
 		"updatedAt": "2018-08-18T11:33:12.042Z",
 		"dday": 50,
-		"rank": "과장"
+        "rank": "과장",
+        "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 	}
 }
 ```
@@ -130,7 +133,8 @@ Request Body (Multipart form)
 		"createdAt": "2018-08-18T11:33:12.042Z",
 		"updatedAt": "2018-08-18T11:33:12.042Z",
 		"dday": 50,
-		"rank": "과장"
+        "rank": "과장",
+        "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 	}
 }
 ```
@@ -161,7 +165,8 @@ Request Body (Multipart form)
 		"comments": [],     // 댓글 comment_id 배열
 		"_id": "5b7808270d4de239b28a5d86",
 		"title": "제목1",
-		"content": "내용내용내용",
+        "content": "내용내용내용",
+        "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
 		"user": {
 			"ddate": "2018-08-18T11:33:12.042Z",
 			"_id": "5b7803f7dc444c39643250e4",
@@ -169,7 +174,8 @@ Request Body (Multipart form)
 			"createdAt": "2018-08-18T11:33:12.042Z",
 			"updatedAt": "2018-08-18T11:33:12.042Z",
 			"dday": 50,
-			"rank": "과장"
+            "rank": "과장",
+            "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 		},
 		"createdAt": "2018-08-18T11:51:03.622Z",
 		"updatedAt": "2018-08-18T11:51:03.622Z"
@@ -198,7 +204,8 @@ Request Headers
 			"comments": [],     // 댓글 comment_id 배열
 			"_id": "5b7808270d4de239b28a5d86",
 			"title": "제목1",
-			"content": "내용내용내용",
+            "content": "내용내용내용",
+            "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
 			"user": {
 				"ddate": "2018-08-18T11:33:12.042Z",
 				"_id": "5b7803f7dc444c39643250e4",
@@ -206,7 +213,8 @@ Request Headers
 				"createdAt": "2018-08-18T11:33:12.042Z",
 				"updatedAt": "2018-08-18T11:33:12.042Z",
 				"dday": 50,
-				"rank": "과장"
+                "rank": "과장",
+                "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 			},
 			"createdAt": "2018-08-18T11:51:03.622Z",
 			"updatedAt": "2018-08-18T11:51:03.622Z"
@@ -236,7 +244,8 @@ Request Headers
 			"comments": [],     // 댓글 comment_id 배열
 			"_id": "5b7808270d4de239b28a5d86",
 			"title": "제목1",
-			"content": "내용내용내용내용",
+            "content": "내용내용내용내용",
+            "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
 			"user": {
 				"ddate": "2018-08-18T11:33:12.042Z",
 				"_id": "5b7803f7dc444c39643250e4",
@@ -244,7 +253,8 @@ Request Headers
 				"createdAt": "2018-08-18T11:33:12.042Z",
 				"updatedAt": "2018-08-18T11:33:12.042Z",
 				"dday": 50,
-				"rank": "과장"
+                "rank": "과장",
+                "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 			},
 			"createdAt": "2018-08-18T11:51:03.622Z",
 			"updatedAt": "2018-08-18T11:51:03.622Z"
@@ -273,7 +283,8 @@ Request Headers
 		"comments": [],     // 댓글 comment_id 배열
 		"_id": "5b7808270d4de239b28a5d86",
 		"title": "제목1",
-		"content": "내용내용내용내용",
+        "content": "내용내용내용내용",
+        "image": "/uploads/5b784a12df9acd3d4f3edf30/image.jpg",
 		"user": {
 			"ddate": "2018-08-18T11:33:12.042Z",
 			"_id": "5b7803f7dc444c39643250e4",
@@ -281,7 +292,8 @@ Request Headers
 			"createdAt": "2018-08-18T11:33:12.042Z",
 			"updatedAt": "2018-08-18T11:33:12.042Z",
 			"dday": 50,
-			"rank": "과장"
+            "rank": "과장",
+            "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 		},
 		"createdAt": "2018-08-18T11:51:03.622Z",
 		"updatedAt": "2018-08-18T11:51:03.622Z"
@@ -319,7 +331,8 @@ Request Body
 			"createdAt": "2018-08-18T11:33:12.042Z",
 			"updatedAt": "2018-08-18T11:33:12.042Z",
 			"dday": 50,
-			"rank": "과장"
+            "rank": "과장",
+            "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 		},
 		"createdAt": "2018-08-18T11:54:23.036Z",
 		"updatedAt": "2018-08-18T11:54:23.036Z"
@@ -354,7 +367,8 @@ Request Headers
 				"createdAt": "2018-08-18T11:33:12.042Z",
 				"updatedAt": "2018-08-18T11:33:12.042Z",
 				"dday": 50,
-				"rank": "과장"
+                "rank": "과장",
+                "thumbnail": "/uploads/5b781900816a913a78756f29/thumbnail.jpg"
 			},
 			"createdAt": "2018-08-18T11:54:23.036Z",
 			"updatedAt": "2018-08-18T11:54:23.036Z"
