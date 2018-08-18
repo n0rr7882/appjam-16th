@@ -7,15 +7,15 @@ const user = new Schema({
     userid: { type: String, required: true, index: true },
     username: { type: String, required: true },
     password: { type: String, required: true, select: false },
-    farewellFor: { type: Number, required: true, default: 0 }
+    ddate: { type: Date, required: true, default: Date.now }
 }, { timestamps: true });
 
 user.virtual('dday').get(function () {
-    return moment.duration(moment().diff(moment(this.createdAt), 'days')) + this.farewellFor;
+    return moment.duration(moment().diff(moment(this.ddate), 'days'));
 });
 
 user.virtual('rank').get(function () {
-    const dday = moment.duration(moment().diff(moment(this.createdAt), 'days')) + this.farewellFor;
+    const dday = moment.duration(moment().diff(moment(this.ddate), 'days'));
     let rank = '';
     if (dday < 7) rank = '인턴';
     else if (dday < 15) rank = '신입';

@@ -44,7 +44,7 @@ Request Body
 	"message": "SUCCESS",
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp...",
 	"user": {
-		"farewellFor": 50,
+		"ddate": "2018-08-18T11:33:12.042Z",
 		"_id": "5b7803f7dc444c39643250e4",
 		"username": "test1",
 		"createdAt": "2018-08-18T11:33:12.042Z",
@@ -71,7 +71,7 @@ Request Headers
 	"success": true,
 	"message": "SUCCESS",
 	"user": {
-		"farewellFor": 50,
+		"ddate": "2018-08-18T11:33:12.042Z",
 		"_id": "5b7803f7dc444c39643250e4",
 		"username": "test1",
 		"createdAt": "2018-08-18T11:33:12.042Z",
@@ -93,7 +93,7 @@ Request Body (Multipart form)
     userid: string
     username: string
     password: string
-    farewellFor: number
+    ddate: string(YYYY-MM-DD)
     thumbnail: file(image)
 ```
 
@@ -104,7 +104,7 @@ Request Body (Multipart form)
 	"success": true,
 	"message": "SUCCESS",
 	"user": {
-		"farewellFor": 50,
+		"ddate": "2018-08-18T11:33:12.042Z",
 		"_id": "5b7803f7dc444c39643250e4",
 		"username": "test1",
 		"createdAt": "2018-08-18T11:33:12.042Z",
@@ -124,7 +124,7 @@ Request Body (Multipart form)
 	"success": true,
 	"message": "SUCCESS",
 	"user": {
-		"farewellFor": 50,
+		"ddate": "2018-08-18T11:33:12.042Z",
 		"_id": "5b7803f7dc444c39643250e4",
 		"username": "test1",
 		"createdAt": "2018-08-18T11:33:12.042Z",
@@ -162,7 +162,7 @@ Request Body
 		"title": "제목1",
 		"content": "내용내용내용",
 		"user": {
-			"farewellFor": 50,
+			"ddate": "2018-08-18T11:33:12.042Z",
 			"_id": "5b7803f7dc444c39643250e4",
 			"username": "test1",
 			"createdAt": "2018-08-18T11:33:12.042Z",
@@ -199,7 +199,7 @@ Request Headers
 			"title": "제목1",
 			"content": "내용내용내용",
 			"user": {
-				"farewellFor": 50,
+				"ddate": "2018-08-18T11:33:12.042Z",
 				"_id": "5b7803f7dc444c39643250e4",
 				"username": "test1",
 				"createdAt": "2018-08-18T11:33:12.042Z",
@@ -237,7 +237,7 @@ Request Headers
 			"title": "제목1",
 			"content": "내용내용내용내용",
 			"user": {
-				"farewellFor": 50,
+				"ddate": "2018-08-18T11:33:12.042Z",
 				"_id": "5b7803f7dc444c39643250e4",
 				"username": "test1",
 				"createdAt": "2018-08-18T11:33:12.042Z",
@@ -274,7 +274,7 @@ Request Headers
 		"title": "제목1",
 		"content": "내용내용내용내용",
 		"user": {
-			"farewellFor": 50,
+			"ddate": "2018-08-18T11:33:12.042Z",
 			"_id": "5b7803f7dc444c39643250e4",
 			"username": "test1",
 			"createdAt": "2018-08-18T11:33:12.042Z",
@@ -312,7 +312,7 @@ Request Body
 		"content": "내용내용내용내용내용",
 		"post": "5b7808270d4de239b28a5d86",
 		"user": {
-			"farewellFor": 50,
+			"ddate": "2018-08-18T11:33:12.042Z",
 			"_id": "5b7803f7dc444c39643250e4",
 			"username": "test1",
 			"createdAt": "2018-08-18T11:33:12.042Z",
@@ -347,7 +347,7 @@ Request Headers
 			"content": "내용내용내용내용내용",
 			"post": "5b7808270d4de239b28a5d86",
 			"user": {
-				"farewellFor": 50,
+				"ddate": "2018-08-18T11:33:12.042Z",
 				"_id": "5b7803f7dc444c39643250e4",
 				"username": "test1",
 				"createdAt": "2018-08-18T11:33:12.042Z",
