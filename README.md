@@ -333,13 +333,14 @@ Request Body
 }
 ```
 
-## `GET /comments/{post_id}`
+## `GET /comments`
 
 ### request
 
 ```http
 Request Headers
     Authorization: string(token)
+    postid: string
 ```
 
 ### response

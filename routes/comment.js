@@ -30,9 +30,9 @@ router.post('/', filter, async (req, res) => {
     }
 });
 
-router.get('/:id', filter, async (req, res) => {
+router.get('/', filter, async (req, res) => {
     try {
-        const post = await Post.findById(req.params.id);
+        const post = await Post.findById(req.headers.postid);
         if (!post) {
             throw new Error('포스트가 존재하지 않습니다.');
         }
