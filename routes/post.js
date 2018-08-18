@@ -46,6 +46,7 @@ router.get('/mine', filter, async (req, res) => {
         });
         return res.send({ success: true, message: 'SUCCESS', posts });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
@@ -60,6 +61,7 @@ router.get('/:id', filter, async (req, res) => {
         post = { ...post._doc, user: extendedUser };
         return res.send({ success: true, message: 'SUCCESS', post });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
@@ -73,6 +75,7 @@ router.get('/', filter, async (req, res) => {
         });
         return res.send({ success: true, message: 'SUCCESS', posts });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });

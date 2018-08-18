@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
         user = { ...user._doc, dday: user.dday, rank: user.rank };
         return res.send({ success: true, message: 'SUCCESS', token, user });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
@@ -26,6 +27,7 @@ router.get('/', filter, async (req, res) => {
         user = { ...user._doc, dday: user.dday, rank: user.rank };
         return res.send({ success: true, message: 'SUCCESS', user });
     } catch ({ message }) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });

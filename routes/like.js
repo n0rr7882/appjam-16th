@@ -16,6 +16,7 @@ router.post('/:id', filter, async (req, res) => {
         }
         return res.send({ success: true, message: 'SUCCESS' });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
@@ -30,6 +31,7 @@ router.delete('/:id', filter, async (req, res) => {
         await post.save();
         return res.send({ message: 'SUCCESS' });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });

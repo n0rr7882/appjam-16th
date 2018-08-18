@@ -49,6 +49,7 @@ router.get('/:id', async (req, res) => {
         user = { ...user._doc, dday: user.dday, rank: user.rank };
         return res.send({ success: true, message: 'SUCCESS', user });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });

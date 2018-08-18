@@ -25,6 +25,7 @@ router.post('/:id', filter, async (req, res) => {
         comment = { ...comment._doc, user: extendedUser };
         return res.send({ success: true, message: 'SUCCESS', comment });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
@@ -42,6 +43,7 @@ router.get('/:id', filter, async (req, res) => {
         });
         return res.send({ success: true, message: 'SUCCESS', comments });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
