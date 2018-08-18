@@ -12,10 +12,12 @@ function uploadHandler(thumbnail, user) {
 
 router.post('/', async (req, res) => {
     try {
+        console.log(req.body);
         if ((await User.findOne({ userid: req.body.userid }))) {
             throw new Error('이미 등록된 ID입니다.');
         }
         const validated = checkProperty(req.body, 'user', true);
+        console.log(validated);
         if (validated.message !== 'SUCCESS') {
             throw new Error(validated.message);
         }
@@ -29,6 +31,7 @@ router.post('/', async (req, res) => {
         user = { ...user._doc, dday: user.dday, rank: user.rank };
         return res.send({ success: true, message: 'SUCCESS', user });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
