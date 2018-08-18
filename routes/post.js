@@ -29,6 +29,7 @@ router.post('/', filter, async (req, res) => {
         post = { ...post._doc, user: extendedUser };
         return res.send({ success: true, message: 'SUCCESS', post });
     } catch (err) {
+        console.error(err);
         return res.status(400).send({ success: false, message: err.message });
     }
 });
